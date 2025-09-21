@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+
+
+
+
+
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +30,69 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+/* reset css */
+
+*, *::before , *::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img{
+  transition:  all 0.3s ease;
+}
+
+/* img:hover{
+  scale: 102%;
+} */
+
+
+
+
+.loading {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  border:8px solid #0000;
+  border-radius: 50%;
+  border-color: #ffc639 #0000;
+  animation: s6 2s infinite linear;
+}
+.loading::before,
+.loading::after {    
+  content:"";
+  grid-area: 1/1;
+  margin:4px;
+  border:inherit;
+  border-radius: 50%;
+}
+.loading::before {
+  border-color:#ffffff   #0000;
+  animation:inherit; 
+  animation-duration: 1s;
+  animation-direction: reverse;
+}
+.loading::after {
+  margin:16px;
+}
+
+@keyframes s6 { 
+  100%{transform: rotate(1turn)}
+}
+
+
+
+
+
+/* Untuk Chrome, Safari, Edge */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Untuk Firefox */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* Untuk Internet Explorer */
 }

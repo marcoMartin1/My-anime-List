@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    images: {
+        remotePatterns :[
+            {
+                hostname: "cdn.myanimelist.net"
+            }
+        ]
+    }
+}
 
 module.exports = nextConfig
+
